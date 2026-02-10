@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teddy Day for My Babe Irish ❤️</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ffd6e7, #ffc2d6);
+            color: #5a2d47;
+            min-height: 100vh;
+            overflow-x: hidden;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 0;
+            position: relative;
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            color: #d81b60;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #8e244d;
+            margin-bottom: 20px;
+        }
+
+        .heart {
+            color: #ff4081;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .teddy-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .teddy-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            width: 300px;
+            box-shadow: 0 10px 25px rgba(214, 27, 96, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .teddy-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(214, 27, 96, 0.25);
+        }
+
+        .teddy-img {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 20px;
+            background: #ffe4ec;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: #d81b60;
+        }
+
+        .teddy-name {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            color: #d81b60;
+            margin-bottom: 10px;
+        }
+
+        .teddy-message {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .love-message {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 800px;
+            box-shadow: 0 10px 25px rgba(214, 27, 96, 0.15);
+            text-align: center;
+        }
+
+        .love-message h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #d81b60;
+            margin-bottom: 20px;
+        }
+
+        .love-message p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .message-from {
+            font-style: italic;
+            color: #8e244d;
+            font-weight: 600;
+            font-size: 1.3rem;
+            margin-top: 15px;
+        }
+
+        .interactive-section {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 800px;
+            box-shadow: 0 10px 25px rgba(214, 27, 96, 0.15);
+            text-align: center;
+        }
+
+        .interactive-section h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #d81b60;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-heart {
+            background: #ff4081;
+            color: white;
+        }
+
+        .btn-heart:hover {
+            background: #d81b60;
+            transform: scale(1.05);
+        }
+
+        .btn-teddy {
+            background: #ffccdc;
+            color: #8e244d;
+        }
+
+        .btn-teddy:hover {
+            background: #ffb3d1;
+            transform: scale(1.05);
+        }
+
+        .btn-love {
+            background: #ffebf3;
+            color: #d81b60;
+            border: 2px solid #ff4081;
+        }
+
+        .btn-love:hover {
+            background: #ffd6e7;
+            transform: scale(1.05);
+        }
+
+        .counter {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            color: #8e244d;
+            font-weight: 600;
+        }
+
+        .teddy-display {
+            margin-top: 30px;
+            min-height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .teddy-display i {
+            font-size: 3rem;
+            color: #d81b60;
+            transition: all 0.3s ease;
+        }
+
+        .hidden-message {
+            display: none;
+            background: #ffebf3;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 30px;
+            font-size: 1.2rem;
+            color: #8e244d;
+            border-left: 5px solid #ff4081;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #8e244d;
+            font-size: 1rem;
+            margin-top: 40px;
+            border-top: 1px solid rgba(142, 36, 77, 0.2);
+        }
+
+        .footer-heart {
+            color: #ff4081;
+            animation: heartbeat 1.5s infinite;
+            margin: 0 5px;
+        }
+
+        /* Teddy bear icon styling */
+        .teddy-icon {
+            font-size: 2.5rem;
+            margin: 0 5px;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .teddy-card {
+                width: 100%;
+                max-width: 350px;
+            }
+            
+            .love-message, .interactive-section {
+                padding: 20px;
+            }
+            
+            .buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-heart heart"></i> Happy Teddy Day, Irish! <i class="fas fa-heart heart"></i></h1>
+            <p class="subtitle">To my beautiful babe, with all the love in my heart ❤️</p>
+            <p class="subtitle">You're more cuddly and adorable than any teddy bear in the world!</p>
+        </header>
+
+        <div class="teddy-container">
+            <div class="teddy-card">
+                <div class="teddy-img">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3 class="teddy-name">Love Bear</h3>
+                <p class="teddy-message">This teddy represents all the love I have for you. It's soft, warm, and always there for you, just like my love.</p>
+                <div class="counter">Hugs: <span id="hug-count">0</span></div>
+            </div>
+
+            <div class="teddy-card">
+                <div class="teddy-img">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3 class="teddy-name">Adventure Bear</h3>
+                <p class="teddy-message">Just like this adventurous teddy, I want to explore the world with you and create beautiful memories together.</p>
+                <div class="counter">Adventures: <span id="adventure-count">0</span></div>
+            </div>
+
+            <div class="teddy-card">
+                <div class="teddy-img">
+                    <i class="fas fa-moon"></i>
+                </div>
+                <h3 class="teddy-name">Cuddle Bear</h3>
+                <p class="teddy-message">For all our cozy nights together, cuddling and talking about everything and nothing at the same time.</p>
+                <div class="counter">Cuddles: <span id="cuddle-count">0</span></div>
+            </div>
+        </div>
+
+        <div class="love-message">
+            <h2>My Dearest Irish,</h2>
+            <p>On this special Teddy Day, I want you to know that you mean the world to me. Every moment with you feels like hugging the softest, most perfect teddy bear in the universe.</p>
+            <p>You bring so much joy, warmth, and love into my life, and I cherish every smile, every laugh, and every hug we share. No teddy bear could ever compare to the comfort and happiness you give me.</p>
+            <p>I promise to always be there for you, to hold you when you need comfort, to make you smile when you're sad, and to love you more with each passing day.</p>
+            <p class="message-from">Forever yours,<br>Your love ❤️</p>
+        </div>
+
+        <div class="interactive-section">
+            <h2>For My Beautiful Irish</h2>
+            <p>Click the buttons to send virtual hugs, teddies, and love to your babe!</p>
+            
+            <div class="buttons">
+                <button class="btn btn-heart" id="sendHeart">
+                    <i class="fas fa-heart"></i> Send Heart
+                </button>
+                <button class="btn btn-teddy" id="sendTeddy">
+                    <i class="fas fa-teddy-bear"></i> Send Teddy
+                </button>
+                <button class="btn btn-love" id="sendLove">
+                    <i class="fas fa-kiss-wink-heart"></i> Send Love
+                </button>
+                <button class="btn btn-heart" id="secretMessage">
+                    <i class="fas fa-lock"></i> Secret Message
+                </button>
+            </div>
+            
+            <div class="counter">
+                Hearts sent: <span id="heart-count">0</span> | 
+                Teddies sent: <span id="teddy-count">0</span> | 
+                Love sent: <span id="love-count">0</span>
+            </div>
+            
+            <div class="teddy-display" id="teddyDisplay">
+                <!-- Teddies will appear here when buttons are clicked -->
+                <i class="fas fa-teddy-bear teddy-icon" style="color: #d81b60;"></i>
+                <i class="fas fa-teddy-bear teddy-icon" style="color: #ff4081;"></i>
+                <i class="fas fa-teddy-bear teddy-icon" style="color: #8e244d;"></i>
+            </div>
+            
+            <div class="hidden-message" id="secretMessageBox">
+                <p><strong>My Secret Message for You:</strong></p>
+                <p>Irish, you're the most amazing person I've ever met. Every day with you feels like a fairy tale, and I fall in love with you more and more. No matter what happens, always remember that you're loved beyond measure. You're my forever teddy bear! 🧸❤️</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>Made with <i class="fas fa-heart footer-heart"></i> for Irish on Teddy Day 2026</p>
+            <p>You're my favorite hello and my hardest goodbye. I love you always and forever.</p>
+            <div style="margin-top: 15px;">
+                <i class="fas fa-teddy-bear teddy-icon" style="color: #d81b60;"></i>
+                <i class="fas fa-teddy-bear teddy-icon" style="color: #ff4081;"></i>
+                <i class="fas fa-teddy-bear teddy-icon" style="color: #8e244d;"></i>
+                <i class="fas fa-teddy-bear teddy-icon" style="color: #ff80ab;"></i>
+                <i class="fas fa-teddy-bear teddy-icon" style="color: #d81b60;"></i>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // DOM Elements
+        const sendHeartBtn = document.getElementById('sendHeart');
+        const sendTeddyBtn = document.getElementById('sendTeddy');
+        const sendLoveBtn = document.getElementById('sendLove');
+        const secretMessageBtn = document.getElementById('secretMessage');
+        const secretMessageBox = document.getElementById('secretMessageBox');
+        const teddyDisplay = document.getElementById('teddyDisplay');
+        
+        // Counters
+        const heartCount = document.getElementById('heart-count');
+        const teddyCount = document.getElementById('teddy-count');
+        const loveCount = document.getElementById('love-count');
+        const hugCount = document.getElementById('hug-count');
+        const adventureCount = document.getElementById('adventure-count');
+        const cuddleCount = document.getElementById('cuddle-count');
+        
+        // Initialize counters
+        let hearts = 0;
+        let teddies = 0;
+        let loves = 0;
+        let hugs = 12;
+        let adventures = 8;
+        let cuddles = 15;
+        
+        // Update counter displays
+        function updateCounters() {
+            heartCount.textContent = hearts;
+            teddyCount.textContent = teddies;
+            loveCount.textContent = loves;
+            hugCount.textContent = hugs;
+            adventureCount.textContent = adventures;
+            cuddleCount.textContent = cuddles;
+        }
+        
+        // Create a floating element
+        function createFloatingElement(icon, type) {
+            const element = document.createElement('i');
+            element.className = icon;
+            element.style.fontSize = Math.random() * 2 + 2 + 'rem';
+            element.style.position = 'absolute';
+            element.style.left = Math.random() * 80 + 10 + '%';
+            element.style.top = '-50px';
+            element.style.opacity = '0.9';
+            element.style.zIndex = '1000';
+            element.style.transition = 'all 2s ease-out';
+            
+            if (type === 'heart') {
+                element.style.color = '#ff4081';
+            } else if (type === 'teddy') {
+                element.style.color = '#8e244d';
+            } else if (type === 'love') {
+                element.style.color = '#d81b60';
+            }
+            
+            document.body.appendChild(element);
+            
+            // Animate the element
+            setTimeout(() => {
+                element.style.top = window.innerHeight + 'px';
+                element.style.opacity = '0';
+                element.style.transform = 'rotate(' + (Math.random() * 360) + 'deg)';
+            }, 10);
+            
+            // Remove element after animation
+            setTimeout(() => {
+                if (element.parentNode) {
+                    element.parentNode.removeChild(element);
+                }
+            }, 2000);
+        }
+        
+        // Add a teddy to the display
+        function addToDisplay(icon, color) {
+            const element = document.createElement('i');
+            element.className = icon;
+            element.style.color = color;
+            element.style.fontSize = '3rem';
+            element.style.margin = '0 10px';
+            element.style.cursor = 'pointer';
+            element.style.transition = 'all 0.3s ease';
+            element.style.animation = 'float 3s ease-in-out infinite';
+            
+            element.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.3) rotate(10deg)';
+                this.style.animation = 'none';
+            });
+            
+            element.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1) rotate(0deg)';
+                this.style.animation = 'float 3s ease-in-out infinite';
+            });
+            
+            element.addEventListener('click', function() {
+                this.style.transform = 'scale(1.5) rotate(20deg)';
+                setTimeout(() => {
+                    this.style.opacity = '0';
+                    setTimeout(() => {
+                        if (this.parentNode) {
+                            this.parentNode.removeChild(this);
+                        }
+                    }, 300);
+                }, 300);
+            });
+            
+            teddyDisplay.appendChild(element);
+        }
+        
+        // Button event listeners
+        sendHeartBtn.addEventListener('click', function() {
+            hearts++;
+            updateCounters();
+            createFloatingElement('fas fa-heart', 'heart');
+            addToDisplay('fas fa-heart', '#ff4081');
+            
+            // Also increase hug count
+            hugs++;
+            updateCounters();
+            
+            // Create a cute alert
+            showNotification('Heart sent to Irish! ❤️');
+        });
+        
+        sendTeddyBtn.addEventListener('click', function() {
+            teddies++;
+            updateCounters();
+            createFloatingElement('fas fa-teddy-bear', 'teddy');
+            addToDisplay('fas fa-teddy-bear', '#8e244d');
+            
+            // Also increase adventure count
+            adventures++;
+            updateCounters();
+            
+            showNotification('Teddy bear sent to Irish! 🧸');
+        });
+        
+        sendLoveBtn.addEventListener('click', function() {
+            loves++;
+            updateCounters();
+            createFloatingElement('fas fa-kiss-wink-heart', 'love');
+            addToDisplay('fas fa-kiss-wink-heart', '#d81b60');
+            
+            // Also increase cuddle count
+            cuddles++;
+            updateCounters();
+            
+            showNotification('Love sent to Irish! 💕');
+        });
+        
+        secretMessageBtn.addEventListener('click', function() {
+            if (secretMessageBox.style.display === 'block') {
+                secretMessageBox.style.display = 'none';
+                secretMessageBtn.innerHTML = '<i class="fas fa-lock"></i> Secret Message';
+            } else {
+                secretMessageBox.style.display = 'block';
+                secretMessageBtn.innerHTML = '<i class="fas fa-lock-open"></i> Hide Message';
+                
+                // Create floating teddy bears around the secret message
+                for (let i = 0; i < 10; i++) {
+                    setTimeout(() => {
+                        createFloatingElement('fas fa-teddy-bear', 'teddy');
+                    }, i * 100);
+                }
+                
+                showNotification('A special message just for Irish! 💌');
+            }
+        });
+        
+        // Show notification function
+        function showNotification(message) {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.textContent = message;
+            notification.style.position = 'fixed';
+            notification.style.top = '20px';
+            notification.style.right = '20px';
+            notification.style.background = '#ff4081';
+            notification.style.color = 'white';
+            notification.style.padding = '15px 20px';
+            notification.style.borderRadius = '10px';
+            notification.style.boxShadow = '0 5px 15px rgba(0,0,0,0.2)';
+            notification.style.zIndex = '10000';
+            notification.style.fontWeight = '600';
+            notification.style.transform = 'translateX(150%)';
+            notification.style.transition = 'transform 0.5s ease';
+            
+            document.body.appendChild(notification);
+            
+            // Animate in
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+            }, 10);
+            
+            // Animate out and remove
+            setTimeout(() => {
+                notification.style.transform = 'translateX(150%)';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 500);
+            }, 3000);
+        }
+        
+        // Initialize counters
+        updateCounters();
+        
+        // Add some initial teddy icons
+        setTimeout(() => {
+            addToDisplay('fas fa-heart', '#ff4081');
+            addToDisplay('fas fa-teddy-bear', '#8e244d');
+            addToDisplay('fas fa-star', '#ffcc00');
+            addToDisplay('fas fa-heart', '#ff4081');
+            addToDisplay('fas fa-teddy-bear', '#d81b60');
+        }, 500);
+        
+        // Create a few floating teddy bears on load
+        window.addEventListener('load', function() {
+            for (let i = 0; i < 5; i++) {
+                setTimeout(() => {
+                    createFloatingElement('fas fa-teddy-bear', 'teddy');
+                }, i * 200);
+            }
+        });
+        
+        // Auto-increase counters every 30 seconds to show growing love
+        setInterval(() => {
+            hugs += Math.floor(Math.random() * 3);
+            adventures += Math.floor(Math.random() * 2);
+            cuddles += Math.floor(Math.random() * 4);
+            updateCounters();
+        }, 30000);
+        
+        // Add a floating animation to existing teddy icons
+        const teddyIcons = document.querySelectorAll('.teddy-icon');
+        teddyIcons.forEach((icon, index) => {
+            icon.style.animationDelay = `${index * 0.5}s`;
+        });
+    </script>
+</body>
+</html>
